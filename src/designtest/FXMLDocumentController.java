@@ -35,10 +35,10 @@ public class FXMLDocumentController implements Initializable {
     final Tooltip tooltip = new Tooltip();
     
     @FXML
-    AnchorPane visualizeAnchorPane;
+    AnchorPane anchorPaneTables;
    
     @FXML
-    AnchorPane connectToDatabaseAnchorPane;
+    AnchorPane anchorPaneVisualize;
     
     @FXML SplitPane splitPane;
 
@@ -51,21 +51,21 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void visualizeButton(ActionEvent event) {
-    visualizeAnchorPane.setVisible(true);
-        connectToDatabaseAnchorPane.setVisible(false);
+    anchorPaneVisualize.setVisible(true);
+        anchorPaneTables.setVisible(false);
 
     }
      @FXML
     private void newConnectionButton(ActionEvent event) {
-    visualizeAnchorPane.setVisible(false);
-        connectToDatabaseAnchorPane.setVisible(true);
+    anchorPaneVisualize.setVisible(false);
+        anchorPaneTables.setVisible(true);
+        
 
     }
     
      @FXML
     private void combineButton(ActionEvent event) {
-    visualizeAnchorPane.setVisible(false);
-        connectToDatabaseAnchorPane.setVisible(true);
+ 
 
     }
     
