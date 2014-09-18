@@ -1,0 +1,34 @@
+/*To put images on buttons*/
+#newConnectionButton {
+    -fx-graphic:url('database.png');
+    -fx-background-color: transparent;
+}
+
+#visualizeButton {
+    -fx-graphic:url('visualize.png');
+    -fx-background-color: transparent;
+}
+
+#combineButton{
+    -fx-graphic:url('combineColumns.png');
+    -fx-background-color: transparent;
+ 
+
+
+}
+
+
+
+.button:hover {
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+.button:pressed
+{    -fx-effect: dropshadow(three-pass-box, rgba(150,0,0,0.30), 100, 0, 0, 0);
+
+}
+
+/* to make tne toolbar with the buttons inside invis*/
+#toolBar{
+    -fx-background-color: transparent;
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="1165.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="designtest.FXMLDocumentController">
+    <children>
+      <Separator halignment="LEFT" layoutX="83.0" layoutY="6.0" orientation="VERTICAL" prefHeight="448.0" prefWidth="1128.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="-46.0" AnchorPane.topAnchor="6.0" />
+      <AnchorPane fx:id="connectToDatabaseAnchorPane" layoutX="96.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane fx:id="splitPane" dividerPositions="2.0" layoutX="86.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="460.0" prefWidth="1079.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                  <Label id="lblYourConnectedTables" alignment="CENTER" prefHeight="51.0" prefWidth="408.0" text="Your connected tables" textAlignment="CENTER">
+                     <font>
+                        <Font name="Menlo Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <TabPane id="tabPane" prefHeight="526.0" prefWidth="673.0">
+                    <tabs>
+                      <Tab text="Untitled Tab 1">
+                           <content>
+                                     
+                                                                          <Label fx:id="label" minHeight="16" minWidth="69" />
+                           </content>
+                      </Tab>
+                      <Tab text="Untitled Tab 2" />
+                    </tabs>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TabPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ToolBar id="toolBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="100.0" />
+               </padding>
+               <items>
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button id="newConnectionButton" fx:id="newConnectionButton" onAction="#newConnectionButton">
+                     <tooltip>
+                        <Tooltip text="This button opens the wizard for connecting to a new table in a database" />
+                     </tooltip>
+                  </Button>
+                  <Button id="visualizeButton" fx:id="visualizeButton" onAction="#visualizeButton">
+                     <tooltip>
+                        <Tooltip text="This button opens up the visualize pane" />
+                     </tooltip>
+                  </Button>
+                  <Button id="combineButton" fx:id="combineButton" onAction="#combineButton">
+                     <tooltip>
+                        <Tooltip text="This button opens op the pane for combining data. If you have connected to different tables, this option gives you the possibility of combining columns." />
+                     </tooltip>
+                  </Button>
+               </items>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
