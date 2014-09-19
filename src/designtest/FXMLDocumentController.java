@@ -13,7 +13,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.Tooltip;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -33,14 +37,17 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     Button combineButton;
     final Tooltip tooltip = new Tooltip();
-    
+
     @FXML
     AnchorPane anchorPaneTables;
-   
+
     @FXML
     AnchorPane anchorPaneVisualize;
+
+    @FXML
+    SplitPane splitPane;
     
-    @FXML SplitPane splitPane;
+    @FXML TabPane tabPane;
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -48,31 +55,58 @@ public class FXMLDocumentController implements Initializable {
         label.setText("Hello World!");
 
     }
-    
+
     @FXML
     private void visualizeButton(ActionEvent event) {
-    anchorPaneVisualize.setVisible(true);
+        anchorPaneVisualize.setVisible(true);
         anchorPaneTables.setVisible(false);
 
     }
-     @FXML
-    private void newConnectionButton(ActionEvent event) {
-    anchorPaneVisualize.setVisible(false);
+    
+      @FXML
+    private void handleDataButton(ActionEvent event) {
+        anchorPaneVisualize.setVisible(false);
         anchorPaneTables.setVisible(true);
-        
+    }
+
+    @FXML
+    private void newConnectionButton(ActionEvent event) {
+
 
     }
-    
-     @FXML
+
+   
+
+    @FXML
+    private void barChartButton(ActionEvent event) {
+
+    }
+
+    @FXML
+    private void pieChartButton(ActionEvent event) {
+
+    }
+
+    @FXML
+    private void lineChartButton(ActionEvent event) {
+
+    }
+
+    @FXML
     private void combineButton(ActionEvent event) {
- 
 
     }
-    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        Tab tab = new Tab();
+        
+    Image nodeImage = new Image(
+            getClass().getResourceAsStream("dataTable.png"));
+        
+        tab.setGraphic(new ImageView(nodeImage));
+     tab.setText("asd");
+     tabPane.getTabs().add(tab);
     }
 
 }

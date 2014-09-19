@@ -1,5 +1,10 @@
 /*To put images on buttons*/
 #newConnectionButton {
+    -fx-graphic:url('new_database.png');
+    -fx-background-color: transparent;
+}
+
+#dataButton {
     -fx-graphic:url('database.png');
     -fx-background-color: transparent;
 }
@@ -12,11 +17,27 @@
 #combineButton{
     -fx-graphic:url('combineColumns.png');
     -fx-background-color: transparent;
- 
-
 
 }
 
+#barChartButton{
+    -fx-graphic:url('bar_chart_icon.png');
+    -fx-background-color: transparent;
+
+}
+
+#pieChartButton{
+    -fx-graphic:url('pie_chart_icon.png');
+    -fx-background-color: transparent;
+
+}
+
+
+#lineChartButton{
+    -fx-graphic:url('line_chart_icon.png');
+    -fx-background-color: transparent; 
+
+}
 
 
 .button:hover {
