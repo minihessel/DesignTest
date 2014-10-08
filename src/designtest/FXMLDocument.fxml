@@ -81,6 +81,12 @@
                   </SplitPane>
                </children>
             </AnchorPane>
+            <AnchorPane fx:id="anchorPane" layoutX="486.0" layoutY="223.0" prefHeight="583.0" prefWidth="774.0">
+               <children>
+                  <VBox fx:id="vBox" prefHeight="644.0" prefWidth="817.0" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="348.0" layoutY="472.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Button" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="871.0" prefWidth="86.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1225.0" AnchorPane.topAnchor="0.0">

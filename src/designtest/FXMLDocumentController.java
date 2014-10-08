@@ -16,9 +16,12 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.Tooltip;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 
 /**
  *
@@ -46,13 +49,42 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     SplitPane splitPane;
-    
-    @FXML TabPane tabPane;
+
+    @FXML
+    TabPane tabPane;
+    @FXML
+    AnchorPane anchorPane;
+        @FXML
+    VBox vBox;
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        TreeItem<String> rootItem = new TreeItem<String>("Inbox");
+        rootItem.setExpanded(true);
+        for (int i = 1; i < 6; i++) {
+            TreeItem<String> item = new TreeItem<String>("Message" + i);
+            rootItem.getChildren().add(item);
+        }
+        TreeView<String> tree = new TreeView<String>(rootItem);
+        vBox.getChildren().add(tree);
+
+        TreeItem<String> rootItem2 = new TreeItem<String>("Inbox1");
+        rootItem.setExpanded(true);
+        for (int i = 1; i < 6; i++) {
+            TreeItem<String> item = new TreeItem<String>("Message" + i);
+            rootItem.getChildren().add(item);
+        }
+        TreeView<String> tree2 = new TreeView<String>(rootItem2);
+        vBox.getChildren().add(tree2);
+        
+                TreeItem<String> rootItem3 = new TreeItem<String>("Inbox1");
+        rootItem.setExpanded(true);
+        for (int i = 1; i < 6; i++) {
+            TreeItem<String> item = new TreeItem<String>("Message" + i);
+            rootItem.getChildren().add(item);
+        }
+        TreeView<String> tree3 = new TreeView<String>(rootItem3);
+        vBox.getChildren().add(tree3);
 
     }
 
@@ -62,8 +94,8 @@ public class FXMLDocumentController implements Initializable {
         anchorPaneTables.setVisible(false);
 
     }
-    
-      @FXML
+
+    @FXML
     private void handleDataButton(ActionEvent event) {
         anchorPaneVisualize.setVisible(false);
         anchorPaneTables.setVisible(true);
@@ -72,10 +104,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void newConnectionButton(ActionEvent event) {
 
-
     }
-
-   
 
     @FXML
     private void barChartButton(ActionEvent event) {
@@ -100,13 +129,13 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Tab tab = new Tab();
-        
-    Image nodeImage = new Image(
-            getClass().getResourceAsStream("dataTable.png"));
-        
+
+        Image nodeImage = new Image(
+                getClass().getResourceAsStream("dataTable.png"));
+
         tab.setGraphic(new ImageView(nodeImage));
-     tab.setText("asd");
-     tabPane.getTabs().add(tab);
+        tab.setText("asd");
+        tabPane.getTabs().add(tab);
     }
 
 }
